@@ -31,6 +31,7 @@ s3://streamsight-raw/spotify/*.csv
      
    - Load: PyArrow → Parquet → s3.put_object
            ↓
+     
 s3://streamsight-processed/spotify/processed/*.parquet
 ```
 
