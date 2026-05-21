@@ -22,8 +22,11 @@ it using pandas, and writes Snappy-compressed Parquet files back to S3
 s3://streamsight-raw/spotify/*.csv
            ↓
    glue_job.py (ETL)
+   
    - Extract: s3.get_object → pandas DataFrame
+   - 
    - Transform: normalize → deduplicate → cast → parse dates → enrich
+   - 
    - Load: PyArrow → Parquet → s3.put_object
            ↓
 s3://streamsight-processed/spotify/processed/*.parquet
