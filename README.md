@@ -33,12 +33,19 @@ s3://streamsight-processed/spotify/processed/*.parquet
 
 ```
 streamsight-aws-pipeline/
+
 ├── docker-compose.yml        # LocalStack container
+
 ├── infra/
+
 │   └── setup.py              # creates S3 buckets, uploads raw CSV
+
 ├── scripts/
+
 │   └── glue_job.py           # Glue-style ETL job
+
 ├── data/                     # CSV dataset (git-ignored)
+
 └── .gitignore
 ```
 
