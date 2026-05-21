@@ -30,6 +30,7 @@ s3://streamsight-raw/spotify/*.csv
    - Transform: normalize → deduplicate → cast → parse dates → enrich
      
    - Load: PyArrow → Parquet → s3.put_object
+     
            ↓
      
 s3://streamsight-processed/spotify/processed/*.parquet
