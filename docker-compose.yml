@@ -1,0 +1,17 @@
+services:
+  localstack:
+    image: localstack/localstack:3.0
+    container_name: localstack
+    ports:
+      - "4566:4566"
+    environment:
+      - SERVICES=s3,glue
+      - DEBUG=0
+      - TMPDIR=/localstack_tmp
+    volumes:
+      - ./scripts:/opt/scripts
+      - ./data:/opt/data
+      - localstack_data:/localstack_tmp
+
+volumes:
+  localstack_data:
