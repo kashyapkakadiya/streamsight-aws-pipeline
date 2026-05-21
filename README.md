@@ -1,9 +1,7 @@
 ```markdown
 # StreamSight AWS Glue ETL Pipeline
 
-An AWS Glue-style ETL pipeline that reads raw data from S3, transforms 
-it using pandas, and writes Snappy-compressed Parquet files back to S3 
-— fully simulated locally using LocalStack.
+An AWS Glue-style ETL pipeline that reads raw data from S3, transforms it using pandas, and writes Snappy-compressed Parquet files back to S3 — fully simulated locally using LocalStack.
 
 ## Stack
 
