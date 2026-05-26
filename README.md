@@ -1,4 +1,3 @@
-```markdown
 # StreamSight AWS Glue ETL Pipeline
 
 An AWS Glue-style ETL pipeline that reads raw data from S3, transforms
@@ -20,19 +19,12 @@ it using pandas, and writes Snappy-compressed Parquet files back to S3
 
 ```
 s3://streamsight-raw/spotify/*.csv
-
            ↓
-           
    glue_job.py (ETL)
-   
    - Extract: s3.get_object → pandas DataFrame
-     
    - Transform: normalize → deduplicate → cast → parse dates → enrich
-     
    - Load: PyArrow → Parquet → s3.put_object
-     
            ↓
-     
 s3://streamsight-processed/spotify/processed/*.parquet
 ```
 
@@ -40,19 +32,12 @@ s3://streamsight-processed/spotify/processed/*.parquet
 
 ```
 streamsight-aws-pipeline/
-
 ├── docker-compose.yml        # LocalStack container
-
 ├── infra/
-
 │   └── setup.py              # creates S3 buckets, uploads raw CSV
-
 ├── scripts/
-
 │   └── glue_job.py           # Glue-style ETL job
-
 ├── data/                     # CSV dataset (git-ignored)
-
 └── .gitignore
 ```
 
@@ -130,4 +115,3 @@ docker-compose down
 
 Source: [Most Streamed Spotify Songs 2024](https://www.kaggle.com/datasets/nelgiriyewithana/most-streamed-spotify-songs-2024)
 Records: 4,600 | Raw size: 1.05 MB | Processed size: 799.98 KB (Parquet)
-```
